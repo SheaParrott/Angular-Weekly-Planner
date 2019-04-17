@@ -2,7 +2,6 @@
   font-family: 'goodVibes';
   src: url(../../assets/GoodVibes.ttf);
 }
-
 header {
   background: linear-gradient(#149788, #18a999);
   margin: 0;
@@ -23,7 +22,7 @@ header {
     cursor: pointer;
   }
   h1:hover {
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 1.5px white;
   }
   nav {
     width: 100vw;
@@ -41,6 +40,7 @@ header {
     }
     a {
       text-decoration: none;
+      color: white;
     }
     h5:hover {
       background: #1dc5b1;

@@ -3,8 +3,12 @@
   <nav>
     <div *ngFor="let nav of navigation">
       <h5>
-        <a>{{ nav }}</a>
+        <a routerLink="/{{ nav.url }}">{{ nav.name }}</a>
       </h5>
     </div>
   </nav>
 </header>
+<!-- each navigation option have a drop down to take you to different sections of page/ display different options -->
+<!-- home: home, features, contact -->
+<!-- Planner: week, day, upcoming events -->
+<!-- about: mission statement, contact, creator -->

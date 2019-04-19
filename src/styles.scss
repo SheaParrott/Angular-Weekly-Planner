@@ -5,3 +5,87 @@ body {
   padding: 0;
   margin: 0;
 }
+.line {
+  height: 1px;
+  background: #666666;
+  width: 100%;
+}
+.container {
+  width: 100vw;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.subContainer {
+  width: 90%;
+}
+.contact {
+  display: flex;
+  align-items: flex-start;
+
+  h3 {
+    font-size: 2em;
+  }
+  h3,
+  h5 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footerRow {
+  display: flex;
+  justify-content: space-evenly;
+  h5 {
+    margin: 15px 0 0 15px;
+    padding: 0;
+  }
+}
+.fa-twitter-square,
+.fa-linkedin,
+.fa-github-square {
+  font-size: 2em;
+}
+.fa-twitter-square,
+.fa-linkedin,
+.fa-github-square {
+  padding: 5px 10px 0 0;
+}
+.fa-file-code {
+  font-size: 1.9em;
+  padding-right: 10px;
+}
+.copyRight {
+  padding: 0;
+  margin-top: 5px;
+}
+
+@media (min-width: 600px) {
+  .footerRow {
+    display: flex;
+    justify-content: space-evenly;
+    h5 {
+      margin: 0 0 0 15px;
+      padding: 0;
+    }
+  }
+  .fa-twitter-square,
+  .fa-linkedin,
+  .fa-github-square {
+    font-size: 1.8em;
+  }
+  .fa-twitter-square,
+  .fa-linkedin,
+  .fa-github-square {
+    padding: 5px 10px 0 0;
+  }
+  .fa-file-code {
+    font-size: 1.5em;
+    padding-right: 10px;
+  }
+}

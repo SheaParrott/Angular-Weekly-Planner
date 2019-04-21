@@ -5,10 +5,17 @@
       <h5>
         <a routerLink="/{{ nav.url }}">{{ nav.name }}</a>
       </h5>
+      <div *ngFor="let options of nav.options">
+        <h5>
+          <a routerLink="/{{ options.url }}">
+            {{ options.name }}
+          </a>
+        </h5>
+      </div>
     </div>
   </nav>
 </header>
 <!-- each navigation option have a drop down to take you to different sections of page/ display different options -->
 <!-- home: home, features, contact -->
-<!-- Planner: week, day, upcoming events -->
+<!-- Planner: week, day, upcoming events (include option for linking to google calendar) -->
 <!-- about: mission statement, contact, creator -->

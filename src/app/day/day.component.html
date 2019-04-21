@@ -1,12 +1,8 @@
 <main>
   <h5>{{ Day }}</h5>
   <div *ngFor="let cell of Time">
-    <!-- className={`timeCell ${this.props.i % 0 ? 'shading' : ''}`} -->
     <span>
       {{ cell }}
-      <!-- {{ {this.props.time <= 12
-                ? `${this.props.time}am`
-                : `${this.props.time - 12}pm`}} -->
     </span>
   </div>
 </main>

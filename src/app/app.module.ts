@@ -9,6 +9,7 @@ import { DayComponent } from './day/day.component';
 import { UpComingEventsComponent } from './up-coming-events/up-coming-events.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
+import { TimeCellComponent } from './time-cell/time-cell.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavComponent } from './nav/nav.component';
     DayComponent,
     UpComingEventsComponent,
     AboutComponent,
-    NavComponent
+    NavComponent,
+    TimeCellComponent
   ],
   imports: [
     BrowserModule,

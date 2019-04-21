@@ -1,3 +1,7 @@
-<p>
-  week works!
-</p>
+<main class="container center">
+  <section class="subContainer">
+    <div class="week" *ngFor="let Day of Week">
+      <app-day [Day]="Day"></app-day>
+    </div>
+  </section>
+</main>

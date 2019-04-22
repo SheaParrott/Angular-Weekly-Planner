@@ -9,24 +9,48 @@ header {
   width: 100vw;
   color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  .hidden {
+    display: none;
+  }
   h1 {
     padding: 0;
     margin: 0;
-    padding: 15px 15px 3px 15px;
+    padding: 11px 15px 3px 15px;
     letter-spacing: 3px;
     font-weight: 500;
-    font-size: 1.8em;
+    font-size: 2em;
     font-family: 'goodVibes';
     cursor: pointer;
   }
-  h1:hover {
+  .fa-bars {
+    padding: 3px 5px 2px 5px;
+    margin: 15px;
+    font-size: 1.8em;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 2px;
+  }
+  .fa-bars:hover {
+    box-shadow: 0 0 1.5px white;
+  }
+  h1:hover,
+  .fa-bars:hover {
     text-shadow: 0 0 1.5px white;
   }
   nav {
-    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 50vw;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d4d4d4;
+    z-index: 100;
+
     div {
       width: 25%;
     }

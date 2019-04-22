@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core'
 })
 export class NavComponent implements OnInit {
   title = 'Destined'
+  hamburgerMenu: boolean = false
   navigation = [
     {
       name: 'HOME',
@@ -21,7 +22,11 @@ export class NavComponent implements OnInit {
         { name: 'UPCOMING', url: '/upcoming' }
       ]
     },
-    { name: 'ABOUT', url: '/about', options: [] }
+    {
+      name: 'ABOUT',
+      url: '/about',
+      options: [{ name: 'MISSION', url: '/' }, { name: 'CREATOR', url: '/' }]
+    }
   ]
   //   <!-- each navigation option have a drop down to take you to different sections of page/ display different options -->
   // <!-- home: home, features, contact -->
@@ -30,4 +35,8 @@ export class NavComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  _hamburgerMenu = () => {
+    this.hamburgerMenu = !this.hamburgerMenu
+  }
 }

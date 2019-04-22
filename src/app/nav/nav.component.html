@@ -1,11 +1,14 @@
 <header>
   <h1>{{ title }}</h1>
-  <nav>
+  <i class="fas fa-bars" (click)="_hamburgerMenu()"></i>
+  <!--  -->
+  <nav [ngStyle]="{ display: this.hamburgerMenu ? 'none' : 'block' }">
+    <h4 (click)="_hamburgerMenu()">- CLOSE -</h4>
     <div *ngFor="let nav of navigation">
       <h5>
         <a routerLink="/{{ nav.url }}">{{ nav.name }}</a>
       </h5>
-      <div *ngFor="let options of nav.options">
+      <div class="hidden" *ngFor="let options of nav.options">
         <h5>
           <a routerLink="/{{ options.url }}">
             {{ options.name }}

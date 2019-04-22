@@ -12,11 +12,13 @@ export class NavComponent implements OnInit {
     {
       name: 'HOME',
       url: '/',
+      show: false,
       options: [{ name: 'FEATURES', url: '/' }, { name: 'CONTACT', url: '/' }]
     },
     {
       name: 'PLANNER',
       url: '/planner',
+      show: false,
       options: [
         { name: 'DAY', url: '/planner' },
         { name: 'UPCOMING', url: '/upcoming' }
@@ -25,6 +27,7 @@ export class NavComponent implements OnInit {
     {
       name: 'ABOUT',
       url: '/about',
+      show: false,
       options: [{ name: 'MISSION', url: '/' }, { name: 'CREATOR', url: '/' }]
     }
   ]
@@ -38,5 +41,8 @@ export class NavComponent implements OnInit {
 
   _hamburgerMenu = () => {
     this.hamburgerMenu = !this.hamburgerMenu
+  }
+  _showOptions = e => {
+    e.show = !e.show
   }
 }

@@ -2,14 +2,29 @@
   <h1>{{ title }}</h1>
   <i class="fas fa-bars" (click)="_hamburgerMenu()"></i>
   <!--  -->
-  <nav [ngStyle]="{ display: this.hamburgerMenu ? 'none' : 'block' }">
+  <nav [ngStyle]="{ visibility: this.hamburgerMenu ? 'visible' : 'hidden' }">
     <h4 (click)="_hamburgerMenu()">- CLOSE -</h4>
-    <div *ngFor="let nav of navigation">
-      <h5>
-        <a routerLink="/{{ nav.url }}">{{ nav.name }}</a>
-      </h5>
-      <div class="hidden" *ngFor="let options of nav.options">
+    <div class="menu" *ngFor="let nav of navigation">
+      <div class="menuOptions">
         <h5>
+          <a routerLink="/{{ nav.url }}">{{ nav.name }} </a>
+        </h5>
+        <i
+          class="fas fa-angle-down"
+          (click)="_showOptions(nav)"
+          [ngStyle]="{ display: nav.show ? 'none' : 'block' }"
+        ></i>
+        <i
+          class="fas fa-angle-up"
+          (click)="_showOptions(nav)"
+          [ngStyle]="{ display: nav.show ? 'block' : 'none' }"
+        ></i>
+      </div>
+      <div
+        [ngStyle]="{ display: nav.show ? 'block' : 'none' }"
+        *ngFor="let options of nav.options"
+      >
+        <h5 class="moreOptions">
           <a routerLink="/{{ options.url }}">
             {{ options.name }}
           </a>

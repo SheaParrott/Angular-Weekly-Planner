@@ -45,14 +45,48 @@ header {
     bottom: 0;
     left: 50%;
     width: 50vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #d4d4d4;
+    background-color: #8a8989;
     z-index: 100;
+    border: 1px solid #a3a3a3;
+    text-shadow: 0px 0 0.6px black;
+    h4 {
+      border-bottom: 1px solid #a3a3a3;
+      background-color: #727171;
+      text-align: center;
+      height: auto;
+      margin: 0;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+    h4:hover {
+      background: #1dc5b1;
+    }
+    .menu {
+      width: 100%;
+      overflow-y: scroll;
+    }
+    .menuOptions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #a3a3a3;
+      margin-top: -1px;
 
-    div {
-      width: 25%;
+      .fa-angle-down,
+      .fa-angle-up {
+        width: 60px;
+        text-align: center;
+        padding: 15px 0;
+        border-left: 1px solid #a3a3a3;
+        cursor: pointer;
+      }
+      .fa-angle-down:hover,
+      .fa-angle-up:hover {
+        background: #1dc5b1;
+      }
+    }
+    .moreOptions {
+      border-bottom: 1px solid #a3a3a3;
     }
     h5 {
       padding: 15px 0;

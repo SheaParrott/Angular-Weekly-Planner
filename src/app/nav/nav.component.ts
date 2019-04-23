@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core'
 export class NavComponent implements OnInit {
   title = 'Destined'
   hamburgerMenu: boolean = false
+  currentDay: any = new Date()
   navigation = [
     {
       name: 'HOME',
@@ -20,7 +21,7 @@ export class NavComponent implements OnInit {
       url: '/planner',
       show: false,
       options: [
-        { name: 'DAY', url: '/planner' },
+        { name: 'DAY', url: `/planner/day/${this.currentDay}` },
         { name: 'UPCOMING', url: '/upcoming' }
       ]
     },

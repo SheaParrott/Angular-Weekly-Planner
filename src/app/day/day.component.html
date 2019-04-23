@@ -1,5 +1,7 @@
 <main>
-  <h5>{{ Day }}</h5>
+  <h5>
+    <a [routerLink]="allowDayClick ? ['/planner/day/', Day] : []">{{ Day }}</a>
+  </h5>
   <div *ngFor="let cell of Time">
     <span>
       {{ cell }}

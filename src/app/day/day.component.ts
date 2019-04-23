@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class DayComponent implements OnInit {
   @Input('Day') Day: any
+  allowDayClick: boolean = true
   Time: Array<any> = [
     '12am',
     '1am',
@@ -36,17 +37,12 @@ export class DayComponent implements OnInit {
   ]
   Week: Array<any>
   constructor(private route: ActivatedRoute) {
-    console.log()
     if (window.location.pathname.includes('/planner/day/')) {
-      console.log('got it! ')
       let d = new Date(this.route.snapshot.paramMap.get('date'))
-      console.log(d)
       this.Day = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`
+      this.allowDayClick = false
     }
   }
 
-  ngOnInit() {
-    console.log()
-    console.log(this.Day)
-  }
+  ngOnInit() {}
 }

@@ -1,6 +1,9 @@
 <main>
-  <h5>
-    <a [routerLink]="allowDayClick ? ['/planner/day/', Day] : []">{{ Day }}</a>
+  <h5 *ngIf="!allowDayClick">
+    {{ Day }}
+  </h5>
+  <h5 *ngIf="allowDayClick">
+    <a [routerLink]="['/planner/day/', Day]">{{ Day }}</a>
   </h5>
   <div *ngFor="let cell of Time">
     <span>

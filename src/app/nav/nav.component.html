@@ -7,7 +7,9 @@
     <div class="menu" *ngFor="let nav of navigation">
       <div class="menuOptions">
         <h5>
-          <a routerLink="/{{ nav.url }}">{{ nav.name }} </a>
+          <a (click)="_hamburgerMenu()" routerLink="/{{ nav.url }}"
+            >{{ nav.name }}
+          </a>
         </h5>
         <i
           class="fas fa-angle-down"
@@ -25,7 +27,7 @@
         *ngFor="let options of nav.options"
       >
         <h5 class="moreOptions">
-          <a routerLink="/{{ options.url }}">
+          <a (click)="_hamburgerMenu()" routerLink="/{{ options.url }}">
             {{ options.name }}
           </a>
         </h5>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Navigation } from 'selenium-webdriver'
 
 @Component({
   selector: 'app-nav',
@@ -42,6 +43,11 @@ export class NavComponent implements OnInit {
 
   _hamburgerMenu = () => {
     this.hamburgerMenu = !this.hamburgerMenu
+    if (!this.hamburgerMenu) {
+      for (let i = 0; i < this.navigation.length; i++) {
+        this.navigation[i].show = false
+      }
+    }
   }
   _showOptions = e => {
     e.show = !e.show

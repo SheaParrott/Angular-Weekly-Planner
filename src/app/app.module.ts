@@ -8,7 +8,8 @@ import { WeekComponent } from './week/week.component'
 import { DayComponent } from './day/day.component'
 import { UpComingEventsComponent } from './up-coming-events/up-coming-events.component'
 import { AboutComponent } from './about/about.component'
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { ContactComponent } from './contact/contact.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavComponent } from './nav/nav.component'
     DayComponent,
     UpComingEventsComponent,
     AboutComponent,
-    NavComponent
+    NavComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

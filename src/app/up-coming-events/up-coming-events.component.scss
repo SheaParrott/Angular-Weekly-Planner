@@ -1,0 +1,22 @@
+main {
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  h5 {
+    margin: 0;
+  }
+  .topBar {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    .dateAndTime {
+      display: flex;
+      h5 {
+        width: 75px;
+      }
+    }
+  }
+  .body {
+    padding: 5px;
+  }
+}

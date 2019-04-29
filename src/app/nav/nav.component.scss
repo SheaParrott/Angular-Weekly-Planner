@@ -6,11 +6,16 @@ header {
   background: linear-gradient(#149788, #18a999);
   margin: 0;
   padding: 0;
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .hidden {
     display: none;
   }
@@ -43,7 +48,7 @@ header {
     text-shadow: 0 0 1.5px white;
   }
   nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 50%;

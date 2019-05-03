@@ -19,6 +19,30 @@ export class StoreService {
     { number: 10; name: 'November'; days: 30 },
     { number: 11; name: 'December'; days: 31 }
   ]
+  currentDay: any = new Date()
+  navigation = [
+    {
+      name: 'HOME',
+      url: '/',
+      show: false,
+      options: [{ name: 'FEATURES', url: '/' }, { name: 'CONTACT', url: '/' }]
+    },
+    {
+      name: 'PLANNER',
+      url: '/planner',
+      show: false,
+      options: [
+        { name: 'DAY', url: `/planner/day/${this.currentDay}` },
+        { name: 'UPCOMING', url: '/upcoming' }
+      ]
+    },
+    {
+      name: 'ABOUT',
+      url: '/about',
+      show: false,
+      options: [{ name: 'MISSION', url: '/' }, { name: 'CREATOR', url: '/' }]
+    }
+  ]
 
   constructor() {}
 

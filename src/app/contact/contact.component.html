@@ -16,10 +16,8 @@
       <i class="fab fa-twitter-square"></i>
       <i class="fab fa-linkedin"></i>
     </div>
-    <div class="footerRow">
-      <h5>HOME</h5>
-      <h5>PLANNER</h5>
-      <h5>ABOUT</h5>
+    <div class="footerRow" *ngFor="let nav of navigation">
+      <h5 [routerLink]="[nav.url]">{{ nav.name }}</h5>
     </div>
   </div>
   <div class="line"></div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { StoreService } from '../store.service'
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  navigation: Array<any>
+  constructor(private data: StoreService) {}
 
   ngOnInit() {
+    this.navigation = this.data.navigation
   }
-
 }

@@ -20,14 +20,16 @@
       }"
       class="carouselSlide"
     >
-      <div *ngFor="let image of carouselImages">
-        <img src="{{ image.src }}" />
-      </div>
+      <img
+        #carouselImage
+        *ngFor="let image of carouselImages"
+        src="{{ image.src }}"
+      />
     </div>
   </div>
   <button
     [ngStyle]="{
-      visibility: carouselNumber === 1 ? 'hidden' : 'visible'
+      visibility: carouselNumber === 0 ? 'hidden' : 'visible'
     }"
     id="prevButton"
     (click)="nextImage(-1)"
@@ -37,7 +39,7 @@
   <button
     [ngStyle]="{
       visibility:
-        carouselNumber === carouselImages.length ? 'hidden' : 'visible'
+        carouselNumber === carouselImages.length - 1 ? 'hidden' : 'visible'
     }"
     id="nextButton"
     (click)="nextImage(1)"

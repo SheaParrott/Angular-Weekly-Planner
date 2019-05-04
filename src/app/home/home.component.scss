@@ -11,7 +11,8 @@ section {
     .carouselSlide {
       display: flex;
       transition: transform ease 0.4s;
-      div {
+      img {
+        margin: auto;
         width: 100%;
       }
     }

@@ -8,13 +8,10 @@ section {
     width: 100%;
     overflow: hidden;
     border: 1px solid black;
-
     .carouselSlide {
       display: flex;
       transition: transform ease 0.4s;
-
-      img {
-        margin: auto;
+      div {
         width: 100%;
       }
     }

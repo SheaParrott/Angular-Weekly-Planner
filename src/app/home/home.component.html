@@ -15,21 +15,35 @@
       #carouselSlide
       [ngStyle]="{
         transform: carouselStyleBool
-          ? 'translateX(' + -size * carouselNumber + 'px)'
+          ? 'translateX(' + -carouselSize * carouselNumber + 'px)'
           : ''
       }"
       class="carouselSlide"
     >
-      <img #carouselImage src="../../assets/calendar.jpg" />
-      <img src="../../assets/calendar.jpg" />
-      <img src="../../assets/calendar.jpg" />
-      <img src="../../assets/calendar.jpg" />
-      <img src="../../assets/calendar.jpg" />
-      <img src="../../assets/calendar.jpg" />
+      <div *ngFor="let image of carouselImages">
+        <img src="{{ image.src }}" />
+      </div>
     </div>
   </div>
-  <button id="prevButton" (click)="nextImage(-1)">Prev</button>
-  <button id="nextButton" (click)="nextImage(1)">Next</button>
+  <button
+    [ngStyle]="{
+      visibility: carouselNumber === 1 ? 'hidden' : 'visible'
+    }"
+    id="prevButton"
+    (click)="nextImage(-1)"
+  >
+    Prev
+  </button>
+  <button
+    [ngStyle]="{
+      visibility:
+        carouselNumber === carouselImages.length ? 'hidden' : 'visible'
+    }"
+    id="nextButton"
+    (click)="nextImage(1)"
+  >
+    Next
+  </button>
 </section>
 
 <!-- engage your life feeling confident, happy people video in the background enjoying life-->

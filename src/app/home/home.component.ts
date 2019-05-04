@@ -8,17 +8,24 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core'
 export class HomeComponent implements OnInit {
   @ViewChild('carouselSlide', { read: ElementRef }) carouselSlide: ElementRef
   displayedImage: String
+  carouselImages: Array<any> = [
+    { src: '../../assets/calendar.jpg' },
+    { src: '../../assets/calendar.jpg' },
+    { src: '../../assets/calendar.jpg' },
+    { src: '../../assets/calendar.jpg' },
+    { src: '../../assets/calendar.jpg' },
+    { src: '../../assets/calendar.jpg' }
+  ]
   carouselStyleBool: boolean = false
-  carouselNumber: number = 0
-  size: number
+  carouselNumber: number = 1
+  carouselSize: number
 
   constructor() {}
 
-  ngOnInit() {
-    this.size = this.carouselSlide.nativeElement.clientWidth
-  }
+  ngOnInit() {}
 
   nextImage = n => {
+    this.carouselSize = this.carouselSlide.nativeElement.clientWidth
     // this.carouselSlide.nativeElement.style.transform = 'translateX(' +(-this.size * this.carouselNumber)'px)'
     this.carouselStyleBool = true
 

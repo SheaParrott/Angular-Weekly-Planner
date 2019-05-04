@@ -10,11 +10,26 @@
   </div>
 </section>
 <section class="container">
-  <div>
-    <div>
+  <div class="carouselContainer">
+    <div
+      #carouselSlide
+      [ngStyle]="{
+        transform: carouselStyleBool
+          ? 'translateX(' + -size * carouselNumber + 'px)'
+          : ''
+      }"
+      class="carouselSlide"
+    >
+      <img #carouselImage src="../../assets/calendar.jpg" />
+      <img src="../../assets/calendar.jpg" />
+      <img src="../../assets/calendar.jpg" />
+      <img src="../../assets/calendar.jpg" />
+      <img src="../../assets/calendar.jpg" />
       <img src="../../assets/calendar.jpg" />
     </div>
   </div>
+  <button id="prevButton" (click)="nextImage(-1)">Prev</button>
+  <button id="nextButton" (click)="nextImage(1)">Next</button>
 </section>
 
 <!-- engage your life feeling confident, happy people video in the background enjoying life-->

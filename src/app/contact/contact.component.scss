@@ -1,0 +1,16 @@
+.row {
+  div {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    h5 {
+      cursor: pointer;
+    }
+    h5:hover,
+    a:hover {
+      color: #1dc5b1;
+    }
+  }
+}

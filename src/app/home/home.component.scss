@@ -3,3 +3,20 @@ section {
     margin-top: 0;
   }
 }
+.container {
+  .carouselContainer {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+
+    .carouselSlide {
+      display: flex;
+      transition: transform ease 0.4s;
+
+      img {
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+}
